@@ -100,21 +100,26 @@ let animals= [
 
 // 어레이에 마지막 아이템 "Zebra" 제거하기
 animals.pop()
+console.log(animals.slice(-5,-1))
 
-// 주어진 어레이에 "Ddg" 추가하기 
-animals.push("Ddg")
+// 주어진 어레이에 "Dog" 추가하기 
+animals.push("Dog")
+console.log(animals)
 
 // 주어진 어레이에 “Mosquito”,“Mouse”,“Mule” 추가하기
 // animals.push("Mosquito")
 // animals.push("Mouse")
 // animals.push("Mule")
-animals.puse("Mosquito", "Mouse", "Mule")
+animals.push("Mosquito", "Mouse", "Mule")
+console.log(animals)
 
 // 해당 어레이에는 "Human"이 있는가?
 animals.includes("Human")
+console.log(animals.includes("Human"))
 
 // 해당 어레이에는 “Cat” 이 있는가?
 animals.includes("Cat")
+console.log(animals.includes("Cat"))
 
 // "Red deer"을 "Deer"로 바꾸시오
 redDeerIndex = animals.indexOf("Red deer")
