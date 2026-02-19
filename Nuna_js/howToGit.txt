@@ -1,0 +1,47 @@
+# Git 초기 설정 
+git config --global user.name "{이름}"
+git config --global user.email "{이메일}"
+git config --list  # 정보 확인 
+
+# 리포지터리 설정(클론방식x)
+git init 
+git add .  # '.'대신 파일 명이 원래 방식 
+git status  # 상태 확인 
+git commit -m "{커밋 메세지}"
+git remote add origin {https://github.com/~.git}  # 깃헙 리포지터리-로컬 붙이기
+git remote -v  # 잘 붙었는지 확인
+git push origin main  # origin은 서버 자체를 뜻함, main은 브랜치 명 
+
+# 이후 루틴 
+git add .
+git commit -m "{커밋 메세지}"
+git push origin main 
+
+# 브랜치 개념 포함 연습한 내용 정리 
+
+git status  # 수정된 파일 포함 작업 디렉토리의 상태 확인
+git status -s  # 간략하게 확인 
+
+git diff  # 스테이징되지 않은 변경사항 상세 코드까지 확인 
+git diff --stat  # 파일 당 몇 줄 변경됐는지 정도로 간략하게 확인 
+git diff {파일명}  # 특정 파일의 변경사항만 확인 
+git diff --staged  # 스테이징 된 경우, 마지막 커밋과의 변경사항 확인 
+
+git push origin main:main  # 이게 사실 full 명령어, from:to 관계
+
+git branch  # 현재 브랜치 목록 확인, 현재 적용된 브랜치는 *표시됨 
+git branch {브랜치명}  # 브랜치 생성 
+git checkout {브랜치명}  # 적용 브랜치 변경 
+git switch {브랜치명}  # 위와 동일한 표현
+git checkout -b {브랜치명}  # 생성과 동시에 해당 브랜치로 변경 
+
+git log --online --graph --all  # 터미널에서 깃그래프 보기 
+
+# 브랜치에서 작업한 내용 main/develop에 merge하는 루틴 정리 
+git checkout main  # merge는 땡겨오는 개념이라 main으로 이동 
+git pull origin main  # 중요, 내가 브랜치 작업하는 동안 main 변경사항 최신화
+git merge {merge할 브랜치명}
+git merge --no--ff {merge할 브랜치명}  # fast-foward방식으로 merge안되게 할 때
+git branch -d {삭제할 브랜치명}  # merge했으니까 작업한 로컬 브랜치 삭제
+git push origin --delete {삭제할 브랜치명}  # 마찬가지로 서버 브랜치 삭제 
+git push origin main  # 로컬에서 merge한 내용 서버 push하여 반영 
