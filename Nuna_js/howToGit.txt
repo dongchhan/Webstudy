@@ -45,3 +45,13 @@ git merge --no--ff {merge할 브랜치명}  # fast-foward방식으로 merge안�
 git branch -d {삭제할 브랜치명}  # merge했으니까 작업한 로컬 브랜치 삭제
 git push origin --delete {삭제할 브랜치명}  # 마찬가지로 서버 브랜치 삭제 
 git push origin main  # 로컬에서 merge한 내용 서버 push하여 반영 
+
+# 260219 에러 해결 
+
+# 처음 브랜치 생성 master 에서 main으로 변경해서 깃허브 pull/push 오류 방지
+git config --global init.defaultBranch main  
+
+# clone 방식이 아니라 github, local 따로 만들고 git remote add origin {주소}
+# 방식으로 할 때, README.md 등 구성요소 달라서 pull 제대로 안될 때, rebase 해주기
+git pull origin main --rebase
+
