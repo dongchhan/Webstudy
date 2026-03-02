@@ -84,6 +84,7 @@ function play() {
 function reset() {
     chances = 5;
     userInput.value = "";
+    userInputCache - [];
     resultArea.textContent = `결과가 나온다.`;
     chanceArea.textContent = `남은 기회: ${chances}`;
     playButton.disabled = false;
