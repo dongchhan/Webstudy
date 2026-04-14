@@ -116,6 +116,7 @@ div .new-style{
 - margin : 내 영역 밖에 공간을 줌 (top, left, right, bottom)  
 - padding: 내 영역 안에서 공간을 줌 (top, left, right, bottom)  
 
+
 # Chapter 4 - 구글 웹사이트 만들기
 
 우선 필요 요소 구현하고 스타일(배치) 나중에 생각하기 
@@ -170,3 +171,30 @@ padding의 값은 1/2/4개가 들어갈 수 있다.
 
 position: absolute; 일 경우 컨텐츠 만큼만 border가 쪼그라듬  
 - width:100%로 해줘야함
+
+
+# Chapter 5 - HTML을 좀더 쉽게 움직이는 방법
+
+Position속성에 값들🎈 
+1. static : 웹사이트의 기본 속성값 , top right bottom left 등 위치 속성은 무시됨.
+2. relative: HTML태그가 있는 위치에서 left right top bottom값을 통해 움직임 
+3. absolute: 부모영역에서  left right top bottom 을 이용해 주어진 위치로 움직임 
+* 단! 여기서 부모란?: 부모 태그가 relative, absolute, fixed 속성 중 하나여야 함. 만약 부모태그가 해당 속성을 가지고있지 않다면 body태그 기준으로 움직임 왜냐하면 body태그는 relative를 기본 속성으로 가지고 있기 때문이다 
+4. fixed : absolute와 비슷하지만 스크롤로 내려도 그 위치에 고정, 무조건 브라우저 창 기준임
+5. Sticky : relative와 비슷하지만 스크롤로 내리면 fixed처럼 그 위치에 고정 
+
+flexbox 의 특징!🎊
+1. display: flex는 모든 요소를 가로로 둔다 
+2. display: flex는 부모한테 적용을 하고 자손을 건트롤 한다.
+3. justify-content :가로로 요소들을 움직인다 (flex-start, center, flex-end, space-between, space-around 등의 값이 있음)
+4. align-items: 세로로 요소들을 움직인다  
+5. flex-direction:column 가로로 정렬된 요소를 세로로 바꾸고 justify-content는 세로로 align-items는 가로방향으로 바뀐다 
+6. order: 자식 요소 하나의 순서 바꿈, 원래 자리 기준으로 양/음수로 지정 
+7. align-self: 자식 요소 하나만 align-items값을 따로 지정할 수 있다. 
+8. flex-wrap: 한줄에 다 우겨넣지 않고 여러줄로 가능하게함, nowrap/wrap/wrap-reverse
+9. flex-flow: flex-direction과 flex-wrap을 동시에 사용하도록 ex) flex-flow: column wrap 
+10. align-content: wrap으로 인해 줄바꿈된 여러 줄 사이의 간격 조정 
+  flex-start/flex-end/center/space-between/space-around/stretch
+
+flexbox연습하는 웹사이트🐸: https://flexboxfroggy.com/#ko  
+
