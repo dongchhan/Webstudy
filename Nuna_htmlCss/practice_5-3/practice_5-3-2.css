@@ -1,0 +1,23 @@
+.main {
+    display: flex;
+    flex-direction: column; 
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: rgb(233, 169, 233);
+}
+
+.div1 {
+    align-self: flex-start;
+}
+
+.div2 {
+    align-self: center;
+}
+
+.div3 {
+    align-self: flex-end;
+}

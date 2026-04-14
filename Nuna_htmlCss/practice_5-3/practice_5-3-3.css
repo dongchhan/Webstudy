@@ -1,0 +1,25 @@
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.big-box {
+    width: 200px;
+    height: 200px;
+    color: white;
+    background-color: violet;
+    position: relative;
+}
+
+.small-box {
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: purple;
+}
+
+.box-position {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
