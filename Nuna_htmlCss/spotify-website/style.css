@@ -1,0 +1,40 @@
+body{
+    margin: 0px;
+}
+
+.nav {
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 132px;
+    height: 45px;
+}
+
+.nav-menu {
+    width: 543px;
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.main {
+    height: 968px;
+    background-color: rgb(41, 65, 171);
+}
+
+.footer {
+    height: 530px;
+    background-color: black;
+}
