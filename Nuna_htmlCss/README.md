@@ -198,3 +198,33 @@ flexbox 의 특징!🎊
 
 flexbox연습하는 웹사이트🐸: https://flexboxfroggy.com/#ko  
 
+
+# Chapter 6 - Spotify 웹 사이트 만들기
+
+Semantic Tag: 웹사이트 만들 때, nav/main/footer 등 거의 패턴처럼 쓰이는 요소들을 별도 태그로 만듬
+(html:5부터 지원)
+
+브라우저 검사기 -> 특정 태그 우클릭 -> force state(특정 상태로 고정) -> hover 등 원하는 이벤트 선택 -> 해당 이벤트일 때 스타일로 고정됨 
+
+단위정리   
+- px : 절대적인 값임, 다른값이 영항을 받지 않음  
+- em: 상위요소 폰트크기 기준이다. 폰트가 12px이면 1em 은 12px. 화면사이즈에따라 반응형웹을 만들때 쓰기 좋다  
+- rem: em이랑 비슷함 But, html태그(root)의 폰트크기 기준이다. 내자신이 12px이더라도 html이 20px이면 1rem 은 20px  
+- % : 상위요소크기 기준으로 % 따짐
+
+hover시 버튼 커지게:
+  - `transform: scale(1.07);`  
+
+fab-icon(CDN)
+```
+<script src="https://kit.fontawesome.com/dab690a483.js" crossorigin="anonymous"> </script>
+
+<i class="fab fa-instagram icon"></i>
+
+.icon {
+    font-size: 24px;
+}
+```
+
+
+
